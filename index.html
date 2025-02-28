@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The MagiScript Library</title>
+    <link rel="stylesheet" href="./style.css">
+    <script> src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"</script>
+    <!-- TODO: (OPTIONAL) add loading of jquery -->
+    <script src="script.js" defer></script>
+</head>
+<body class="library">
+<h1>
+    Welcome to The MagiScript Library of Mexyll the Magnificent</h1>
+<div id="familiar-container" class="top-right-corner">
+    <p id="familiar-name.display"></p>
+</div>
+
+    <div class="book-view-container">
+    <div id="book-view" class="hidden">
+        <button id="close-tome">Close Tome</button>
+
+        <div class="spell-page hidden" id="change-password-book">
+            <div class="page-left">
+                <img src="resources/spellPages/witchPassword.webp" alt="witch and padlock">
+            </div>
+
+            <form id="change-password-form">
+            <!-- TODO: add form for change password -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required> 
+
+                <label for="new-password"> New password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+
+                <label for="confirm-password">Confirm password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit">Change Password</button>
+            </form>
+
+        </div>
+        <div class="spell-page hidden" id="change-name-book">
+            <div class="page-left">
+                <img src="resources/spellPages/renameWizard.webp" alt="wizard looking in mirror">
+            </div>
+
+            <div class="page-right">
+                This spell weaves the ancient magic of names and identity, allowing the caster to shed old titles and
+                embrace a new persona. The incantation should be spoken with a clear vision of the new name and its
+                attributes, marking a rebirth of self in the mystic realms.
+                You should henceforth be known as
+                <form id="rename-wizard-form">
+                    <!-- TODO: add form for changing name -->
+                     <label for="wizard-name">Wizard Name:</label>
+                     <input type="text" id="wizard-name" required>
+                     
+                     <label for="wizard-title">Title:</label>
+                     <input type="text" id="wizard-title" required>
+                     <button type="submit">Rename Wizard Name</button> 
+                </form>
+            </div>
+        </div>
+
+        <div class="spell-page hidden" id="summon-familiar-book">
+            <div class="page-left">
+                <img src="resources/spellPages/angryLlama.webp" alt="angry two headed llama breathing fire">
+            </div>
+
+            <div class="page-right">
+                <form id="summon-form">
+                    <!-- TODO: add form for summon familiar -->
+                     <label for="familiar-name">Familiar Name:</label>
+                     <input type="text" id="familiar-name" name="familiar-name">
+
+                     <label for="familiar-type">Familiar Base:</label>
+                     <input type="text" id="familiar-type" >
+
+                     <label> <input type="checkbox" id="has-wings">Has Wings?</label>
+
+                     <div id="wings-type-container" class="hidden">
+                        <label for="wings-type">Type of wings:</label>
+                        <input type="text"id=wings-type>
+                     </div>
+
+                     <!--Familiar Traits-->
+                     <label>Choose familiar traits:</label>
+                     <input type="checkbox" class="trait" value="Fire Breath"> Fire Breath
+                     <input type="checkbox" class="trait" value="Levitating"> Levitating
+                     <input type="checkbox" class="trait" value="Extra Head"> Extra Head
+
+                     <!--Mood-->
+                     <label for="mood">Familiar Mood:</label>
+                     <select id="mood">
+                        <option>Angry</option>
+                        <option>Grumpy</option>
+                        <option>Irate</option>
+                        <option>Apathetic</option>
+                        <option>Sleepy</option>
+                        <option>Hesitant</option>
+                        <option>Inspired</option>
+                        <option>Thankful</option>
+                        <option>Confident</option>
+                        <option>Curious</option>
+                        <option>Joyfull</option>
+                     </select>
+
+                     <!--End of contract-->
+                     <label for="contract-end">End of contract:</label>
+                     <input type="date"id="contract-end">
+
+                     <button type="submit">Summon Familiar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>Explore the magic within books...</p>
+<div class="books-container">
+    <div class="book" id="change-password-book-cover">
+        <h2>The Arcanum of Archmage Arlo the Apathetic</h2>
+        <img src="resources/books/arcanum.webp" alt="Cover of Arcanum of Archmage Arlo the Apathetic">
+    </div>
+    <div class="book" id="change-name-book-cover">
+        <h2>Professor Noodlewhisker the Unpronounceable's Nomen Novum</h2>
+        <img src="resources/books/nomenNovum.webp" alt="Cover of Professor Noodlewhisker the Unpronounceable's Nomen Novum">
+    </div>
+    <div class="book" id="summon-familiar-book-cover">
+        <h2>Mexyll the Magnificent’s
+            Mystical Manuscripts of Summon Familiar</h2>
+        <img src="resources/books/manuscript.webp" alt="Cover of Mystical Manuscripts of Summon Familiar">
+    </div>
+</div>
+</body>
+</html>
